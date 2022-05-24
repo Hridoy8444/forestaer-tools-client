@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Spark Plug Swivel Socket Set ",
+        "img": "https://www.ctatools.com/image/cache/data/2019/2030-228x228.jpg",
+        "quantity": 20000,
+        "min": "200",
+        "price": 5,
+        "description": "Features 14mm & 16mm 12 point swivel spark plug sockets to access hard to reach spark plugs. 15-20° max swivel range"
+    },
+    {
+        "_id": 2,
+        "name": "Master Line Kit",
+        "img": "https://www.ctatools.com/image/cache/data/2018/7662-228x228.jpg",
+        "quantity": 20000,
+        "min": "200",
+        "price": 8,
+        "description": "Comprehensive electrical testing kit for cars, trucks, tractors, ATVs, Motorcycles, boats & more. Effortlessly analyze voltage, continuity, impedance and current"
+    },
+    {
+        "_id": 3,
+        "name": "Oil Filter Wrench w/ Stand ",
+        "img": "https://www.ctatools.com/image/cache/data/2018/4325-228x228.JPG",
+        "quantity": 20000,
+        "min": "200",
+        "price": 7,
+        "description": "4 piece oil filter wrench set with stable, secure and permanent stand. Stand includes a magnetic bottom for secure placement on metal surfaces anywhere around the shop"
+    },
+    {
+        "_id": 4,
+        "name": "Lug Driller",
+        "img": "https://www.ctatools.com/image/cache/data/2019/1775-228x228.jpg",
+        "quantity": 20000,
+        "min": "200",
+        "price": 9,
+        "description": "Removes the most difficult locking lug bolts quickly, safely and without damage to wheel or rim. Great for all vehicles with lost or damaged locking lug bolt keys"
+    },
+    {
+        "_id": 5,
+        "name": "Ford / Mazda Timing Kit ",
+        "img": "https://www.ctatools.com/image/cache/data/2018/2221.-228x228.jpg",
+        "quantity": 20000,
+        "min": "200",
+        "price": 6,
+        "description": "Comprehensive tool kit services Ford, Mazda & Lincoln 1.4L, 1.5L, 1.6L, 2.0L, 2.3L, 2.5L, 3.0L & 3.5L engines (variations of the EcoBoost, Duratec Flex Fuel & GTDI engine models from mid-90's through today"
+    },
+    {
+        "_id": 6,
+        "name": "5 Pt. EPR Torx Plus Socket Set",
+        "img": "https://www.ctatools.com/image/cache/data/2019/2030-228x228.jpg",
+        "quantity": 20000,
+        "min": "200",
+        "price": 3,
+        "description": "Note: 5 sided Torx Plus EPR sockets are NOT to be confused with standard Torx Plus EP 6 sided Torx. Packaged on metal rail"
+    }
+]
