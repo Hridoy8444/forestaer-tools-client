@@ -12,7 +12,7 @@ const Tools = () => {
     return (
         <div>
             <h2>This is tools:{tools.length}</h2>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-12'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 '>
                 {
                     tools.map(tool => <Tool
                         key={tool._id}
