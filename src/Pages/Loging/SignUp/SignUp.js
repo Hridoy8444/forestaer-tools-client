@@ -1,7 +1,7 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const SignUp = () => {
@@ -12,24 +12,31 @@ const SignUp = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    const navigate = useNavigate();
 
     let signInError;
 
-    if(gLoading || loading){
+    if (gLoading || loading || updateError) {
         return <button class="btn loading">loading</button>
     }
 
-    if(error || gError){
-        signInError =<p className='text-red-500'>{error?.message || gError?.message}</p>
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500'>{error?.message || gError?.message || updateError.message}</p>
     }
     if (gUser) {
         console.log(gUser);
     }
 
-    const onSubmit = data => {
+    const onSubmit = async data => {
         console.log(data);
-        createUserWithEmailAndPassword(data.email, data.password);
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+        console.log('update done');
+        navigate('/');
     }
     return (
         <div>
@@ -50,12 +57,12 @@ const SignUp = () => {
                                         value: true,
                                         message: 'Name is Required'
                                     }
-                                    
+
                                 })} />
 
                                 <label className="label">
                                     {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
-                                    
+
                                 </label>
                             </div>
                             <div class="form-control w-full max-w-xs">
