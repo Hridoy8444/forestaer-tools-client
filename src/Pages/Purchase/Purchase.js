@@ -20,7 +20,7 @@ const Purchase = () => {
 
 
     const onSubmit = data => {
-        const orderQuantity = parseInt(data.orderQuantity.value);
+        const orderQuantity = parseInt(data.orderQuantity);
         console.log(orderQuantity);
         const order = {
             productId: id,
@@ -33,7 +33,22 @@ const Purchase = () => {
             address: data.address,
             status: 'unpaid'
         }
-        
+        fetch(`http://localhost:5000/order/`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    return toast.success('Order has been placed. Please, pay soon!')
+                } else {
+                    return toast.error('You have already ordered this product. Please, pay soon and order again!')
+
+                }
+            })
 
     };
     return (

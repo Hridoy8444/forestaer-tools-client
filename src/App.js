@@ -9,6 +9,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import SignUp from './Pages/Loging/SignUp/SignUp';
 import RequireAuth from './Pages/Loging/RequireAuth';
 import Purchase from './Pages/Purchase/Purchase';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           </RequireAuth>
         }></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
       <Footer></Footer>
     </div>
   );
