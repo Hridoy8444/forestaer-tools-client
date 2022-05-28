@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`, {
+            fetch(`https://calm-headland-08657.herokuapp.com/order?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     
@@ -38,7 +38,7 @@ const MyOrders = () => {
 
     const handleCancel = id => {
 
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://calm-headland-08657.herokuapp.com/order/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

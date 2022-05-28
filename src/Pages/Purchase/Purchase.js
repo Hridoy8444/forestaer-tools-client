@@ -12,7 +12,7 @@ const Purchase = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tool/${id}`)
+        fetch(`https://calm-headland-08657.herokuapp.com/tool/${id}`)
             .then(res => res.json())
             .then(data => setTool(data))
     }, [id])
@@ -33,7 +33,7 @@ const Purchase = () => {
             address: data.address,
             status: 'unpaid'
         }
-        fetch(`http://localhost:5000/order/`, {
+        fetch(`https://calm-headland-08657.herokuapp.com/order/`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

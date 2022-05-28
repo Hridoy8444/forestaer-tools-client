@@ -12,7 +12,7 @@ const AddTools = () => {
             img: event.target.img.value,
             description: event.target.description.value
         }
-        fetch(`http://localhost:5000/tool`, {
+        fetch(`https://calm-headland-08657.herokuapp.com/tool`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

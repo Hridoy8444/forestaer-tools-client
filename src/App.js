@@ -22,6 +22,7 @@ import AddReview from './Pages/Dashboard/AddReview';
 import Blogs from './Pages/Blogs/Blogs';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import EditProfile from './Pages/Dashboard/EditeProfile';
+import NotFound from './Pages/NotFound/NotFound ';
 
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
           <Route path='addtools' element={<AddTools></AddTools>}></Route>
           
         </Route>
-
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>
       <Footer></Footer>
