@@ -12,13 +12,16 @@ import Purchase from './Pages/Purchase/Purchase';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Pages/Dashboard/Dashboard';
-import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
-import AddReview from './Pages/Dashboard/AddReview/AddReview';
-import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
-import Users from './Pages/Dashboard/Users/Users';
-import ManageOrders from './Pages/Dashboard/ManageOrders/ManageOrders';
-import ManageTools from './Pages/Dashboard/ManageTools/ManageTools';
-import AddTools from './Pages/Dashboard/AddTools/AddTools';
+import MyOrder from './Pages/Dashboard/MyOrders';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import Users from './Pages/Dashboard/Users';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+import ManageTools from './Pages/Dashboard/ManageTools';
+import AddTools from './Pages/Dashboard/AddTools';
+import AddReview from './Pages/Dashboard/AddReview';
+import Blogs from './Pages/Blogs/Blogs';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+
 
 function App() {
   return (
@@ -29,6 +32,8 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/tools/:id' element={
           <RequireAuth>
             <Purchase/>
@@ -40,7 +45,7 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<Users></Users>}></Route>

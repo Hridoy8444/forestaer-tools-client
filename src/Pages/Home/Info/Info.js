@@ -1,15 +1,15 @@
 import React from 'react';
 import InfoCard from './InfoCard';
-import clock from '../../../icons/clock.svg';
-import marker from '../../../icons/marker.svg';
-import phone from '../../../icons/phone.svg';
+import world from '../../../icons/world.svg';
+import storage from '../../../icons/storage.svg';
+import truck from '../../../icons/truck.svg';
 
 const Info = () => {
     return (
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 '>
-            <InfoCard cardTitle="Opening Hours" bgClass="bg-gradient-to-r from-secondary to-primary" img={clock}></InfoCard>
-            <InfoCard cardTitle="Our Locations" bgClass="bg-accent" img={marker}></InfoCard>
-            <InfoCard cardTitle="Contract Us" bgClass="bg-gradient-to-r from-secondary to-primary" img={phone}></InfoCard>
+            <InfoCard cardTitle="Fastest Delivery" bgClass="bg-secondary from-secondary to-primary" img={truck}></InfoCard>
+            <InfoCard cardTitle="Worldwide Transport" bgClass="bg-accent" img={world}></InfoCard>
+            <InfoCard cardTitle="Warehousing" bgClass="bg-gradient-to-r from-secondary to-primary" img={storage}></InfoCard>
         </div>
     );
 };

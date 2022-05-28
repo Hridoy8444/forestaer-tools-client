@@ -1,0 +1,9 @@
+.service-container{
+    margin-left: 250px;
+}
+
+@media only screen and (max-width: 576px){
+    .service-container{
+        margin-left: 50px;
+    }
+}

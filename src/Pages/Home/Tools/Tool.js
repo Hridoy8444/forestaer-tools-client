@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Tool.css';
 
 const Tool = ({ tool }) => {
     const { _id, img, name, description, min, quantity, price } = tool;
@@ -8,7 +9,7 @@ const Tool = ({ tool }) => {
         navigate(`/tools/${id}`);
     }
     return (
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card card-compact w-96 bg-base-300 shadow-xl">
             <figure><img src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="card-title">{name}</h2>
