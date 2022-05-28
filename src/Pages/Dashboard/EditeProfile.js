@@ -26,7 +26,7 @@ const EditProfile = () => {
             city: event.target.city.value,
             phone: phone,
             link: event.target.link.value,
-            imglink: event.target.imglink.value
+            // imglink: event.target.imglink.value
         }
         fetch(`http://localhost:5000/user/${user.email}`, {
             method: 'PUT',
@@ -38,9 +38,11 @@ const EditProfile = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
+                    console.log(data);
                     toast.success('Profile has been updated!')
                 } else {
-                    toast.error('Profile could not be updated Try Again!')
+                    toast.error('Profile could not be updated Try Again!');
+                    console.log(data);
 
                 }
             })
@@ -51,10 +53,10 @@ const EditProfile = () => {
                 <h2 className='text-center text-2xl text-primary'>My Profile</h2>
                 <div className='grid sm:grid-cols-1 lg:grid-cols-2' >
 
-                    <div className="">
+                    {/* <div className="">
                         <img className='w-56 rounded-full ml-16 lg:ml-32' src={userdata.imglink ? userdata.imglink : "https://api.lorem.space/image/face?hash=92310"} alt='blank' />
 
-                    </div>
+                    </div> */}
                     <div className='mx-10'>
                         <form onSubmit={handleUpdateProfile} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-300">
                             <div className="card-body ">
@@ -87,11 +89,11 @@ const EditProfile = () => {
                                     <input type="text" name='link' required placeholder="LinkedIn Profile Link" className="input input-bordered" />
 
                                 </div>
-                                <div className="form-control">
+                                {/* <div className="form-control">
 
                                     <input type="text" name='imglink' required placeholder="User Picture Link" className="input input-bordered" />
 
-                                </div>
+                                </div> */}
                                 <div className="form-control mt-6">
                                     <input type='submit' className="btn btn-primary" />
                                 </div>

@@ -12,12 +12,14 @@ const Navbar = () => {
     const logout = () => {
         signOut(auth);
         navigate('/login');
+        localStorage.removeItem('accessToken');
       };
 
     const menuItem = <>
         <li><Link to={"/"}>Home</Link></li>
+        <li><Link to={"/dashboard"}>Dashboard</Link></li>
         <li><Link to={"/blogs"}>Blogs</Link></li>
-        <li><Link to={"/about"}>About</Link></li>
+        
         <li><Link to={"/portfolio"}>My Portfolio</Link></li>
         <li>{user ? <button onClick={logout} class="btn btn-ghost">Logout</button> : <Link to={"/login"}>Login</Link>}</li>
     </>

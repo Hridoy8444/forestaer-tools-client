@@ -12,7 +12,7 @@ const Dashboard = () => {
             <div className="drawer drawer-mobile">
                 <input id="dashboard-side-bar" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content ">
-                    <h2 className='text-3xl text-center text-primary font-bold'>Welcome to Dashboard</h2>
+                    <h2 className='text-3xl text-center  font-bold'>Welcome to Dashboard</h2>
                     <Outlet></Outlet>
 
                 </div>
@@ -36,7 +36,7 @@ const Dashboard = () => {
                             admin && <li className='bg-primary my-2 rounded-lg text-white font-bold'><Link to="/dashboard/manageproducts">Manage Products</Link></li>
                         }
                         {
-                            admin && <li className='bg-primary my-2 rounded-lg text-white font-bold'><Link to="/dashboard/addproducts">Add Products</Link></li>
+                            admin && <li className='bg-primary my-2 rounded-lg text-white font-bold'><Link to="/dashboard/addtools">Add Products</Link></li>
                         }
                     </ul>
 

@@ -15,6 +15,7 @@ const MyOrders = () => {
             fetch(`http://localhost:5000/order?email=${user.email}`, {
                 method: 'GET',
                 headers: {
+                    
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
@@ -55,7 +56,7 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h2 className='mt-10 mb-5 text-center text-primary text-2xl'>My orders: {orders.length}</h2>
+            <h2 className='mt-10 mb-5 text-center  text-2xl'>My orders: {orders.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     {/* <!-- head --> */}

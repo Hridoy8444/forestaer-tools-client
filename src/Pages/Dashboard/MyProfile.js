@@ -17,7 +17,7 @@ const MyProfile = () => {
 
     return (
         <div className=''>
-            <h2 className='text-center text-2xl text-primary'>My Profile</h2>
+            <h2 className='text-center text-2xl '>My Profile</h2>
             <div className='grid sm:grid-cols-1 lg:grid-cols-2' >
                 <div className="">
                     <div className="">

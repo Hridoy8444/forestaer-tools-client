@@ -18,11 +18,12 @@ const useToken = user => {
                 .then(data => {
                     console.log('data inside use Token', data);
                     const accessToken = data.accessToken;
-                    localStorage.setItem('accessToken', accessToken)
+                    // localStorage.setItem('accessToken', accessToken)
+                    localStorage.setItem('accessToken', accessToken);
                     setToken(accessToken);
                 })
 
-        }
+        } 
     }, [user])
     return [token]
 }

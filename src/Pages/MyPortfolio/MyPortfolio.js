@@ -10,7 +10,7 @@ const MyPortfolio = () => {
                     <img height={300} src={portfolio} alt="" />
                 </div>
                 <div >
-                    <div className='text-center' style={{ marginTop: "20px" }}>
+                    <div className='text-center text-xl font-bold' style={{ marginTop: "20px" }}>
                         <h2>Md Fardous Hossain Reday</h2>
                         <h5>Bachelor in Software Engineering, Yangzhou University, China</h5>
                         <h5>Email: mdreday736@gmail.com</h5>

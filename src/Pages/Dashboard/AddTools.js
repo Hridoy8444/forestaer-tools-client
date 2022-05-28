@@ -7,8 +7,8 @@ const AddTools = () => {
         const productData = {
             name: event.target.name.value,
             price: parseInt(event.target.price.value),
-            availableQuantity: parseInt(event.target.availableQuantity.value),
-            minimumOrderQuantity: parseInt(event.target.minimumOrderQuantity.value),
+            quantity: parseInt(event.target.quantity.value),
+            min: parseInt(event.target.min.value),
             img: event.target.img.value,
             description: event.target.description.value
         }
@@ -46,11 +46,11 @@ const AddTools = () => {
                         </div>
                         <div className="form-control">
 
-                            <input type="number" name='availableQuantity' required placeholder='Quantity' className="input input-bordered" />
+                            <input type="number" name='quantity' required placeholder='Quantity' className="input input-bordered" />
                         </div>
                         <div className="form-control">
 
-                            <input type="number" name='minimumOrderQuantity' required placeholder='Minimum Order Quantity' className="input input-bordered" />
+                            <input type="number" name='min' required placeholder='Minimum Order Quantity' className="input input-bordered" />
                         </div>
 
                         <div className="form-control">

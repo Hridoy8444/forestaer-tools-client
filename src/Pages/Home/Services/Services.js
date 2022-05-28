@@ -5,8 +5,8 @@ const Services = () => {
     return (
         <div className='my-28 '>
             <div className='text-center my-14'>
-                <h2 className='text-primary text-xl font-bold uppercase'>Our services</h2>
-                <h2 className='text-4xl'>Services We Provide</h2>
+                
+                <h2 className='text-4xl'>Business Summery</h2>
             </div>
             <div class="stats stats-vertical lg:stats-horizontal shadow service-container">
 

@@ -21,6 +21,7 @@ import AddTools from './Pages/Dashboard/AddTools';
 import AddReview from './Pages/Dashboard/AddReview';
 import Blogs from './Pages/Blogs/Blogs';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import EditProfile from './Pages/Dashboard/EditeProfile';
 
 
 function App() {
@@ -36,11 +37,21 @@ function App() {
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/tools/:id' element={
           <RequireAuth>
-            <Purchase/>
+            <Purchase />
+          </RequireAuth>
+        }></Route>
+        {/* <Route path='/payment/:id' element={
+          <RequireAuth>
+            <Payment />
+          </RequireAuth>
+        }></Route> */}
+        <Route path='/dashboard/profile/editprofile' element={
+          <RequireAuth>
+            <EditProfile />
           </RequireAuth>
         }></Route>
 
-<Route path='/dashboard' element={
+        <Route path='/dashboard' element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>
@@ -52,6 +63,7 @@ function App() {
           <Route path='manageorders' element={<ManageOrders></ManageOrders>}></Route>
           <Route path='managetools' element={<ManageTools></ManageTools>}></Route>
           <Route path='addtools' element={<AddTools></AddTools>}></Route>
+          
         </Route>
 
       </Routes>
