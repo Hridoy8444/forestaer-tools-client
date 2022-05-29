@@ -23,6 +23,8 @@ import Blogs from './Pages/Blogs/Blogs';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import EditProfile from './Pages/Dashboard/EditeProfile';
 import NotFound from './Pages/NotFound/NotFound ';
+import Payment from './Pages/Dashboard/Payment';
+
 
 
 function App() {
@@ -41,11 +43,11 @@ function App() {
             <Purchase />
           </RequireAuth>
         }></Route>
-        {/* <Route path='/payment/:id' element={
+        <Route path='/payment/:id' element={
           <RequireAuth>
             <Payment />
           </RequireAuth>
-        }></Route> */}
+        }></Route>
         <Route path='/dashboard/profile/editprofile' element={
           <RequireAuth>
             <EditProfile />

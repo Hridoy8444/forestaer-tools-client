@@ -1,7 +1,7 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import React, { useState, useEffect } from 'react';
 
-const CheckoutForm = ({ order }) => {
+const CheckOutForm = ({ order }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
@@ -11,13 +11,14 @@ const CheckoutForm = ({ order }) => {
     const [clientSecret, setclientSecret] = useState('');
 
     const { _id, amount, userName, email } = order;
+    
 
     useEffect(() => {
         fetch(`https://calm-headland-08657.herokuapp.com/create-payment-intent`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify({ amount })
         })
@@ -74,7 +75,7 @@ const CheckoutForm = ({ order }) => {
             console.log(paymentIntent);
             setSuccess('Congrats! Your Payment is completed!')
 
-            //store payment on DB
+            // store payment on DB
             const payment = {
                 order: _id,
                 transactionId: paymentIntent.id
@@ -106,7 +107,7 @@ const CheckoutForm = ({ order }) => {
                         style: {
                             base: {
                                 fontSize: '16px',
-                                color: 'white',
+                                color: 'black',
                                 '::placeholder': {
                                     color: '#aab7c4',
                                 },
@@ -117,9 +118,10 @@ const CheckoutForm = ({ order }) => {
                         },
                     }}
                 />
-                <button className='my-5 btn bg-green-400' type="submit" disabled={!stripe || !clientSecret}>
+                <button className='my-5 btn bg-green-400' type="submit " disabled={!stripe || !clientSecret} >
                     Pay
                 </button>
+                {/* disabled={!stripe || !clientSecret} */}
             </form>
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
@@ -134,4 +136,4 @@ const CheckoutForm = ({ order }) => {
     );
 };
 
-export default CheckoutForm;
+export default CheckOutForm;
